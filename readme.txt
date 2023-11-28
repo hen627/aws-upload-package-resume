@@ -4,7 +4,7 @@ What this backend does is accept user input from the frontend, convert user inpu
 
 To get it running you need your own openAI account with money in it, you need to set up supabase as well, and lastly you need a frontend to both accept input and display output.
 
-That is the basics to get it running, but you also need a tool to convert and store the information you want the user to be able to query into the database, otherwise there is nothing for the user to retreive. In my case I have a separate tool that I use to convert the data to a vector format and stores it in supabase.
+That is the basics to get the backend running, but it wont give you anything since there is no data in supabase. You need to convert and store the information you want the user to be able to query into the database, otherwise there is nothing for the user to retreive. In my case I have a separate tool that I use to convert the data to a vector format and stores it in supabase.
 
 -----------
 
