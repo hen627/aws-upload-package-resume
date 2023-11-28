@@ -18,3 +18,4 @@ All env keys are in aws lambda.
 Supabase sql setup is separate and not part of the package.
 
 /Resumeweb is the frontend to this backend.
+The information conversion tool is currently only stored locally.
