@@ -2,7 +2,6 @@ This is part of the backend of my personal site, the connection to Supabase requ
 
 What this backend does is accept user input from the frontend, convert user input into vector data using openAI's ada model then sends that to Supabase, the SQL code is then ran on Supabase to determine the appropriate response to send back. A request is then sent to Chatgpt to further refine the answer to make sure it matches the users query. 
 
-
 -----------
 
 Use localtesting to adjust prompts for chatgpt testing and sql database.
@@ -10,7 +9,7 @@ use index.js to update and upload to aws.
 
 commonheaders are depricated, need to be adjusted.
 
-All env keys are in aws.
+All env keys are in aws lambda.
 
 Supabase sql setup is separate and not part of the package.
 
