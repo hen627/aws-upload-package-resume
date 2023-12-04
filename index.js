@@ -90,9 +90,7 @@ async function GetInputQueryAndSearchVectorDB(query) {
       }).promise();
       return chatCompletion.choices;
     } else {
-      // Use the 'result' here or return it to the calling code
-      // console.log("Search Result:", result);
-      // return result;
+
       const chatCompletion = await openai.chat.completions.create({
         messages: [
           { role: 'system', content: 'You are pretending to be a virtual version of the human being named Henry Elias, as you answer questions as human-like as possible.' },
@@ -107,7 +105,7 @@ async function GetInputQueryAndSearchVectorDB(query) {
     }
   } catch (error) {
     console.error(error);
-    throw error; // Rethrow the error to propagate it further if needed
+    throw error; 
   }
 }
 
@@ -120,14 +118,12 @@ const commonHeaders = {
 export async function handler(event, context) {
   try {
     if (event.httpMethod === 'OPTIONS') {
-      // Handle preflight OPTIONS request
       return {
         statusCode: 200,
         headers: commonHeaders,
         body: '',
       };
     }
-    // Handle the actual POST request
     const requestBody = JSON.parse(typeof event.body === 'string' ? event.body : '{}');
     const question = requestBody.question;
     const chatresult = await GetInputQueryAndSearchVectorDB(question);
